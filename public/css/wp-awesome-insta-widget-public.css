@@ -1,0 +1,159 @@
+/**
+ * All of the CSS for your public-facing functionality should be
+ * included in this file.
+ */
+
+/*Insta Grid System */
+.insta-container {
+  width : 100%;
+  max-width : 1200px; 
+}
+/*-- our cleafix hack -- */ 
+.row:before, 
+.row:after {
+  content:"";
+  display: table ;
+   clear:both;
+}
+[class*='insta_column-'] {
+  float: left;
+  min-height: 1px; 
+  width: 16.66%;
+}
+.insta_column-one{
+  width: 100%;
+}
+.insta_column-two{
+  width: 50%; 
+}
+.insta_column-three{
+  width: 33.33%; 
+}
+.insta_column-four{
+  width: 66.664%;
+}
+.insta_column-five{
+  width: 83.33%;
+}
+.insta_column-six{
+  width: 16.66%; 
+}
+
+ /***
+ Instagram
+***/
+.widget ul{
+	list-style: none;
+}
+.insta-container ul, .insta-container ol{
+	margin: 0 !important;
+	padding: 0 !important;
+}
+.wp-awesome-insta-img .item {
+  position: relative;
+}
+.wp-awesome-insta-img .item .play-button {
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+.wp-awesome-insta-img .item .play-button:before {
+  display: inline-block;
+  content: '\e624';
+  font-size: 80px;
+  color: #fff;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+}
+.wp-awesome-insta-img .item.video a:after {
+  content: '';
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 0;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+.wp-awesome-insta-follow-links {
+  font-size: 14px;
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 0;
+}
+
+.wp-awesome-insta-img .item a.show-info:after {
+    content: '';
+    background: rgba(0, 0, 0, 0.7);
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+    -moz-transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+    -o-transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  .wp-awesome-insta-img .item:hover a.show-info:after,
+  .wp-awesome-insta-img .item:hover .item-info {
+    opacity: 1;
+    visibility: visible;
+  }
+  .wp-awesome-insta-img .item:hover .show-info .play-button {
+    opacity: 0;
+    visibility: hidden;
+  }
+  .wp-awesome-insta-img .item-info {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    text-align: center;
+    font-size: 0;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1;
+    margin: 0;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+  }
+  .wp-awesome-insta-img .item-info > li {
+    font-size: 14px;
+    display: inline-block;
+    vertical-align: top;
+    color: #fff;
+    padding-right: 15px;
+  }
+  .wp-awesome-insta-img .item-info > li:before {
+    font-family: 'Pe-icon-7-stroke';
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    font-size: 16px;
+    margin-right: 5px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .wp-awesome-insta-img .item-info > li.likes:before {
+    content: 'Likes';
+  }
+  .wp-awesome-insta-img .item-info > li.comments:before {
+    content: 'Comments';
+  }
